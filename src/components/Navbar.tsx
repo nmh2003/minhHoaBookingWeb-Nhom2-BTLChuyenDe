@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from './ui/button';
-import { BedDouble, Search, Menu, User } from 'lucide-react';
+import { BedDouble, Menu, User } from 'lucide-react';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -17,25 +17,25 @@ const Navbar = () => {
         
         <nav className="hidden md:flex items-center gap-6">
           <Link to="/" className="text-gray-700 hover:text-hotel-300 transition-colors">
-            Home
+            Trang Chủ
           </Link>
           <Link to="/hotels" className="text-gray-700 hover:text-hotel-300 transition-colors">
-            Hotels
+            Khách Sạn
           </Link>
           <Link to="/destinations" className="text-gray-700 hover:text-hotel-300 transition-colors">
-            Destinations
+            Điểm Đến
           </Link>
           <Link to="/about" className="text-gray-700 hover:text-hotel-300 transition-colors">
-            About
+            Giới Thiệu
           </Link>
         </nav>
         
         <div className="flex items-center gap-2">
           <Button variant="outline" size="sm" className="hidden md:flex gap-1">
             <User size={16} />
-            <span>Sign In</span>
+            <span>Đăng Nhập</span>
           </Button>
-          <Button className="hidden md:flex gap-1">Book Now</Button>
+          <Button className="hidden md:flex gap-1">Đặt Ngay</Button>
           <Button 
             variant="ghost" 
             size="icon" 
@@ -56,34 +56,34 @@ const Navbar = () => {
               className="text-gray-700 hover:text-hotel-300 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Home
+              Trang Chủ
             </Link>
             <Link 
               to="/hotels" 
               className="text-gray-700 hover:text-hotel-300 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Hotels
+              Khách Sạn
             </Link>
             <Link 
               to="/destinations" 
               className="text-gray-700 hover:text-hotel-300 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              Destinations
+              Điểm Đến
             </Link>
             <Link 
               to="/about" 
               className="text-gray-700 hover:text-hotel-300 transition-colors py-2"
               onClick={() => setIsMenuOpen(false)}
             >
-              About
+              Giới Thiệu
             </Link>
             <Button variant="outline" className="mt-2 w-full justify-center gap-1">
               <User size={16} />
-              <span>Sign In</span>
+              <span>Đăng Nhập</span>
             </Button>
-            <Button className="w-full justify-center">Book Now</Button>
+            <Button className="w-full justify-center">Đặt Ngay</Button>
           </nav>
         </div>
       )}
