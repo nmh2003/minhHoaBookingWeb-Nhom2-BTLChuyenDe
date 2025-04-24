@@ -63,8 +63,8 @@ const HotelCard = ({ hotel }: { hotel: HotelProps }) => {
             </div>
             
             <div>
-              <span className="text-lg font-bold text-hotel-400">${hotel.price}</span>
-              <span className="text-sm text-gray-500"> /night</span>
+              <span className="text-lg font-bold text-hotel-400">{hotel.price.toLocaleString('vi-VN')}</span>
+              <span className="text-sm text-gray-500"> VNĐ/đêm</span>
             </div>
           </div>
         </CardContent>

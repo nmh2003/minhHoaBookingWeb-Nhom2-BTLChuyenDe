@@ -14,75 +14,75 @@ const Footer = () => {
               <span className="text-xl font-bold">ComfyStay</span>
             </Link>
             <p className="text-gray-600 text-sm">
-              Discover exceptional accommodations worldwide. Find your perfect stay at the best prices.
+              Khám phá các khách sạn tuyệt vời trên khắp Việt Nam. Tìm nơi nghỉ dưỡng hoàn hảo với giá tốt nhất.
             </p>
           </div>
           
           <div className="col-span-1">
-            <h3 className="font-semibold mb-4">Company</h3>
+            <h3 className="font-semibold mb-4">Công ty</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/about" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  About Us
+                  Về chúng tôi
                 </Link>
               </li>
               <li>
                 <Link to="/careers" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  Careers
+                  Tuyển dụng
                 </Link>
               </li>
               <li>
                 <Link to="/blog" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  Blog
+                  Tin tức
                 </Link>
               </li>
               <li>
                 <Link to="/press" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  Press
+                  Báo chí
                 </Link>
               </li>
             </ul>
           </div>
           
           <div className="col-span-1">
-            <h3 className="font-semibold mb-4">Support</h3>
+            <h3 className="font-semibold mb-4">Hỗ trợ</h3>
             <ul className="space-y-3">
               <li>
                 <Link to="/help" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  Help Center
+                  Trung tâm trợ giúp
                 </Link>
               </li>
               <li>
                 <Link to="/contact" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  Contact Us
+                  Liên hệ
                 </Link>
               </li>
               <li>
                 <Link to="/faq" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  FAQ
+                  Câu hỏi thường gặp
                 </Link>
               </li>
               <li>
                 <Link to="/terms" className="text-gray-600 hover:text-hotel-300 transition-colors text-sm">
-                  Terms & Conditions
+                  Điều khoản & Điều kiện
                 </Link>
               </li>
             </ul>
           </div>
           
           <div className="col-span-1">
-            <h3 className="font-semibold mb-4">Subscribe</h3>
+            <h3 className="font-semibold mb-4">Đăng ký</h3>
             <p className="text-gray-600 text-sm mb-4">
-              Get exclusive deals and travel inspiration.
+              Nhận thông tin ưu đãi và cập nhật mới nhất.
             </p>
             <div className="flex border rounded-md overflow-hidden">
               <input
                 type="email"
-                placeholder="Your email"
+                placeholder="Email của bạn"
                 className="px-3 py-2 flex-1 outline-none text-sm"
               />
               <button className="bg-hotel-300 text-white px-4 py-2 text-sm">
-                Subscribe
+                Đăng ký
               </button>
             </div>
           </div>
@@ -90,18 +90,18 @@ const Footer = () => {
         
         <div className="border-t mt-12 pt-6 flex flex-col md:flex-row items-center justify-between">
           <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} ComfyStay. All rights reserved.
+            © {new Date().getFullYear()} ComfyStay. Đã đăng ký bản quyền.
           </p>
           
           <div className="flex items-center gap-4 mt-4 md:mt-0">
             <Link to="/privacy" className="text-gray-500 hover:text-hotel-300 transition-colors text-sm">
-              Privacy
+              Quyền riêng tư
             </Link>
             <Link to="/terms" className="text-gray-500 hover:text-hotel-300 transition-colors text-sm">
-              Terms
+              Điều khoản
             </Link>
             <Link to="/sitemap" className="text-gray-500 hover:text-hotel-300 transition-colors text-sm">
-              Sitemap
+              Sơ đồ trang
             </Link>
           </div>
         </div>
