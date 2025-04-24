@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import HotelCard from '@/components/HotelCard';
@@ -31,8 +30,8 @@ const HotelsPage = () => {
     <Layout>
       <div className="bg-gray-50 py-8">
         <div className="container mx-auto px-4">
-          <h1 className="text-3xl font-bold mb-2">Find Your Perfect Hotel</h1>
-          <p className="text-gray-600 mb-8">Browse and filter our selection of premium hotels</p>
+          <h1 className="text-3xl font-bold mb-2">Tìm Khách Sạn Lý Tưởng</h1>
+          <p className="text-gray-600 mb-8">Khám phá và lọc danh sách khách sạn cao cấp của chúng tôi</p>
           
           <SearchForm className="mb-8" />
           
@@ -40,10 +39,10 @@ const HotelsPage = () => {
             {/* Filters */}
             <div className="w-full md:w-1/4">
               <div className="bg-white p-4 rounded-lg shadow-sm">
-                <h2 className="font-semibold text-lg mb-4">Filter Results</h2>
+                <h2 className="font-semibold text-lg mb-4">Bộ Lọc</h2>
                 
                 <div className="mb-6">
-                  <h3 className="font-medium mb-2">Price Range</h3>
+                  <h3 className="font-medium mb-2">Khoảng Giá</h3>
                   <div className="px-2 mb-2">
                     <Slider 
                       defaultValue={[50, 500]} 
@@ -55,13 +54,13 @@ const HotelsPage = () => {
                     />
                   </div>
                   <div className="flex justify-between text-sm text-gray-600">
-                    <span>${priceRange[0]}</span>
-                    <span>${priceRange[1]}+</span>
+                    <span>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(priceRange[0] * 100000)}</span>
+                    <span>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(priceRange[1] * 100000)}+</span>
                   </div>
                 </div>
                 
                 <div className="mb-6">
-                  <h3 className="font-medium mb-2">Amenities</h3>
+                  <h3 className="font-medium mb-2">Tiện Nghi</h3>
                   <div className="space-y-2">
                     <div className="flex items-center gap-2">
                       <Checkbox 
@@ -69,7 +68,7 @@ const HotelsPage = () => {
                         checked={amenities.wifi}
                         onCheckedChange={() => handleAmenityChange('wifi')}
                       />
-                      <Label htmlFor="wifi">Free WiFi</Label>
+                      <Label htmlFor="wifi">WiFi Miễn Phí</Label>
                     </div>
                     <div className="flex items-center gap-2">
                       <Checkbox 
@@ -77,7 +76,7 @@ const HotelsPage = () => {
                         checked={amenities.pool}
                         onCheckedChange={() => handleAmenityChange('pool')}
                       />
-                      <Label htmlFor="pool">Pool</Label>
+                      <Label htmlFor="pool">Hồ Bơi</Label>
                     </div>
                     <div className="flex items-center gap-2">
                       <Checkbox 
@@ -93,7 +92,7 @@ const HotelsPage = () => {
                         checked={amenities.restaurant}
                         onCheckedChange={() => handleAmenityChange('restaurant')}
                       />
-                      <Label htmlFor="restaurant">Restaurant</Label>
+                      <Label htmlFor="restaurant">Nhà Hàng</Label>
                     </div>
                     <div className="flex items-center gap-2">
                       <Checkbox 
@@ -101,13 +100,13 @@ const HotelsPage = () => {
                         checked={amenities.fitness}
                         onCheckedChange={() => handleAmenityChange('fitness')}
                       />
-                      <Label htmlFor="fitness">Fitness Center</Label>
+                      <Label htmlFor="fitness">Phòng Gym</Label>
                     </div>
                   </div>
                 </div>
                 
                 <div className="mb-6">
-                  <h3 className="font-medium mb-2">Star Rating</h3>
+                  <h3 className="font-medium mb-2">Xếp Hạng Sao</h3>
                   <div className="flex flex-wrap gap-2">
                     {[5, 4, 3, 2].map((rating) => (
                       <Badge 
@@ -115,13 +114,13 @@ const HotelsPage = () => {
                         variant="outline" 
                         className="cursor-pointer hover:bg-hotel-300 hover:text-white"
                       >
-                        {rating}+ Stars
+                        {rating}+ Sao
                       </Badge>
                     ))}
                   </div>
                 </div>
                 
-                <Button className="w-full" variant="outline">Apply Filters</Button>
+                <Button className="w-full" variant="outline">Áp Dụng Bộ Lọc</Button>
               </div>
             </div>
             

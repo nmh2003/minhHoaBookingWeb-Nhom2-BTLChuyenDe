@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import Layout from '@/components/Layout';
@@ -16,7 +15,6 @@ const HotelDetail = () => {
   const [children, setChildren] = useState('0');
   const [date, setDate] = useState<Date | undefined>(new Date());
 
-  // Find the hotel from the mock data
   const hotel = hotels.find(h => h.id === id);
   
   if (!hotel) {
@@ -33,51 +31,38 @@ const HotelDetail = () => {
     );
   }
   
-  // Mock room types
   const roomTypes = [
     {
-      name: "Standard Room",
+      name: "Phòng Tiêu Chuẩn",
       price: hotel.price,
       maxGuests: 2,
-      bedType: "1 Queen Bed",
-      amenities: ["Free WiFi", "TV", "Air Conditioning", "En-suite Bathroom"]
+      bedType: "1 Giường Đôi",
+      amenities: ["WiFi Miễn Phí", "TV", "Điều Hòa", "Phòng Tắm Riêng"]
     },
     {
-      name: "Deluxe Room",
+      name: "Phòng Deluxe",
       price: hotel.price * 1.3,
       maxGuests: 2,
-      bedType: "1 King Bed",
-      amenities: ["Free WiFi", "TV", "Air Conditioning", "En-suite Bathroom", "City View", "Mini Bar"]
+      bedType: "1 Giường King",
+      amenities: ["WiFi Miễn Phí", "TV", "Điều Hòa", "Phòng Tắm Riêng", "View Thành Phố", "Mini Bar"]
     },
     {
-      name: "Suite",
+      name: "Phòng Suite",
       price: hotel.price * 1.8,
       maxGuests: 4,
-      bedType: "1 King Bed + 1 Sofa Bed",
-      amenities: ["Free WiFi", "TV", "Air Conditioning", "Separate Living Area", "Luxury Bathroom", "Premium View", "Mini Bar", "Coffee Machine"]
+      bedType: "1 Giường King + 1 Giường Sofa",
+      amenities: ["WiFi Miễn Phí", "TV", "Điều Hòa", "Phòng Khách Riêng", "Phòng Tắm Sang Trọng", "View Đẹp", "Mini Bar", "Máy Pha Cà Phê"]
     }
   ];
-  
-  // Mock amenity icons
-  const amenityIcons: Record<string, React.ReactNode> = {
-    "Free WiFi": <Wifi size={16} />,
-    "Pool": <div className="w-4 h-4 flex items-center justify-center text-xs">🏊</div>,
-    "Spa": <div className="w-4 h-4 flex items-center justify-center text-xs">💆</div>,
-    "Restaurant": <Utensils size={16} />,
-    "Fitness Center": <Dumbbell size={16} />,
-    "Bar": <Coffee size={16} />
-  };
-  
+
   return (
     <Layout>
-      {/* Hero Image */}
       <div 
         className="h-[400px] bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${hotel.image})` }}
       />
       
       <div className="container mx-auto px-4 py-8">
-        {/* Hotel Header */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-8">
           <div>
             <div className="flex items-center mb-2">
@@ -114,30 +99,28 @@ const HotelDetail = () => {
           </div>
         </div>
         
-        {/* Main Content */}
         <div className="flex flex-col lg:flex-row gap-8">
-          {/* Left Column - Hotel Info */}
           <div className="w-full lg:w-2/3">
             <Tabs defaultValue="overview">
               <TabsList className="w-full mb-6">
-                <TabsTrigger value="overview" className="flex-1">Overview</TabsTrigger>
-                <TabsTrigger value="rooms" className="flex-1">Rooms</TabsTrigger>
-                <TabsTrigger value="amenities" className="flex-1">Amenities</TabsTrigger>
-                <TabsTrigger value="reviews" className="flex-1">Reviews</TabsTrigger>
+                <TabsTrigger value="overview" className="flex-1">Tổng Quan</TabsTrigger>
+                <TabsTrigger value="rooms" className="flex-1">Phòng</TabsTrigger>
+                <TabsTrigger value="amenities" className="flex-1">Tiện Nghi</TabsTrigger>
+                <TabsTrigger value="reviews" className="flex-1">Đánh Giá</TabsTrigger>
               </TabsList>
               
               <TabsContent value="overview" className="space-y-6">
                 <div>
-                  <h2 className="text-xl font-semibold mb-4">About This Hotel</h2>
+                  <h2 className="text-xl font-semibold mb-4">Về Khách Sạn</h2>
                   <p className="text-gray-600 mb-4">{hotel.description}</p>
                   <p className="text-gray-600">
-                    Located in the heart of {hotel.location.split(',')[0]}, this hotel offers easy access to major attractions and transportation. 
-                    Guests love the convenient location, exceptional service, and comfortable accommodations.
+                    Tọa lạc tại vị trí đắc địa của {hotel.location}, khách sạn cung cấp dễ dàng tiếp cận đến các điểm tham quan và phương tiện giao thông.
+                    Du khách yêu thích vị trí thuận tiện, dịch vụ xuất sắc và tiện nghi thoải mái của chúng tôi.
                   </p>
                 </div>
                 
                 <div>
-                  <h2 className="text-xl font-semibold mb-4">Top Amenities</h2>
+                  <h2 className="text-xl font-semibold mb-4">Tiện Nghi Nổi Bật</h2>
                   <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                     {hotel.amenities?.map((amenity, index) => (
                       <div key={index} className="flex items-center gap-2">
@@ -150,7 +133,7 @@ const HotelDetail = () => {
               </TabsContent>
               
               <TabsContent value="rooms" className="space-y-6">
-                <h2 className="text-xl font-semibold mb-4">Available Room Types</h2>
+                <h2 className="text-xl font-semibold mb-4">Các Loại Phòng</h2>
                 <div className="space-y-4">
                   {roomTypes.map((room, index) => (
                     <div key={index} className="border rounded-lg p-4">
@@ -185,12 +168,12 @@ const HotelDetail = () => {
                 <h2 className="text-xl font-semibold mb-4">Hotel Amenities</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4">
                   {[
-                    "Free WiFi", "Swimming Pool", "Spa and Wellness Center",
-                    "Restaurant", "Bar/Lounge", "Fitness Center",
-                    "24-Hour Front Desk", "Airport Shuttle", "Room Service",
-                    "Business Center", "Concierge Service", "Laundry Service",
-                    "Parking", "Air Conditioning", "Heating",
-                    "Elevator", "Non-smoking Rooms", "Family Rooms"
+                    "WiFi Miễn Phí", "Hồ Bơi", "Spa & Trung Tâm Chăm Sóc Sức Khỏe",
+                    "Nhà Hàng", "Quầy Bar/Sảnh Chờ", "Phòng Tập Gym",
+                    "Lễ Tân 24/7", "Đưa Đón Sân Bay", "Dịch Vụ Phòng",
+                    "Trung Tâm Doanh Nhân", "Dịch Vụ Concierge", "Giặt Ủi",
+                    "Bãi Đậu Xe", "Điều Hòa", "Máy Sưởi",
+                    "Thang Máy", "Phòng Không Hút Thuốc", "Phòng Gia Đình"
                   ].map((amenity, index) => (
                     <div key={index} className="flex items-center gap-2">
                       <Check size={16} className="text-hotel-300" />
@@ -202,10 +185,10 @@ const HotelDetail = () => {
               
               <TabsContent value="reviews" className="space-y-6">
                 <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
-                  <h2 className="text-xl font-semibold">Guest Reviews</h2>
+                  <h2 className="text-xl font-semibold">Đánh Giá Từ Khách Hàng</h2>
                   <div>
                     <Badge className="bg-hotel-300">
-                      {hotel.rating.toFixed(1)} / 5 - Excellent
+                      {hotel.rating.toFixed(1)} / 5 - Xuất Sắc
                     </Badge>
                   </div>
                 </div>
@@ -217,8 +200,8 @@ const HotelDetail = () => {
                         <div className="flex items-center">
                           <div className="w-10 h-10 bg-gray-200 rounded-full mr-3"></div>
                           <div>
-                            <h4 className="font-medium">Guest {index + 1}</h4>
-                            <p className="text-xs text-gray-500">Stayed in October 2024</p>
+                            <h4 className="font-medium">Khách hàng {index + 1}</h4>
+                            <p className="text-xs text-gray-500">Đã nghỉ vào Tháng 4, 2025</p>
                           </div>
                         </div>
                         <div className="flex">
@@ -233,30 +216,29 @@ const HotelDetail = () => {
                       </div>
                       <p className="text-gray-600">
                         {index === 0 ? (
-                          "Had an amazing stay at this hotel. The room was spacious and clean, and the staff was extremely helpful and friendly. The location was perfect for exploring the city."
+                          "Tuyệt vời! Phòng rộng rãi và sạch sẽ, nhân viên rất thân thiện và nhiệt tình. Vị trí hoàn hảo để khám phá thành phố."
                         ) : index === 1 ? (
-                          "Great experience overall. The amenities were excellent, especially the pool and restaurant. Would definitely stay here again on my next trip."
+                          "Trải nghiệm tuyệt vời. Tiện nghi rất tốt, đặc biệt là hồ bơi và nhà hàng. Chắc chắn sẽ quay lại trong chuyến đi tới."
                         ) : (
-                          "Comfortable beds, clean rooms, and fantastic service. The breakfast was delicious and had many options. Highly recommended!"
+                          "Giường thoải mái, phòng sạch sẽ, dịch vụ tuyệt vời. Bữa sáng ngon và đa dạng. Rất đáng để trải nghiệm!"
                         )}
                       </p>
                     </div>
                   ))}
                 </div>
                 
-                <Button variant="outline" className="w-full">View All Reviews</Button>
+                <Button variant="outline" className="w-full">Xem Tất Cả Đánh Giá</Button>
               </TabsContent>
             </Tabs>
           </div>
           
-          {/* Right Column - Booking Widget */}
           <div className="w-full lg:w-1/3">
             <div className="bg-white border rounded-lg p-6 sticky top-24">
-              <h2 className="text-xl font-semibold mb-4">Book Your Stay</h2>
+              <h2 className="text-xl font-semibold mb-4">Đặt Phòng</h2>
               
               <div className="space-y-4">
                 <div>
-                  <label className="text-sm font-medium mb-1 block">Check-in / Check-out</label>
+                  <label className="text-sm font-medium mb-1 block">Nhận phòng / Trả phòng</label>
                   <div>
                     <Calendar 
                       mode="single"
@@ -269,10 +251,10 @@ const HotelDetail = () => {
                 </div>
                 
                 <div>
-                  <label className="text-sm font-medium mb-1 block">Guests</label>
+                  <label className="text-sm font-medium mb-1 block">Số khách</label>
                   <div className="grid grid-cols-2 gap-4">
                     <div>
-                      <label className="text-xs text-gray-500 block mb-1">Adults</label>
+                      <label className="text-xs text-gray-500 block mb-1">Người lớn</label>
                       <Select value={adults} onValueChange={setAdults}>
                         <SelectTrigger>
                           <SelectValue placeholder="Adults" />
@@ -287,7 +269,7 @@ const HotelDetail = () => {
                     </div>
                     
                     <div>
-                      <label className="text-xs text-gray-500 block mb-1">Children</label>
+                      <label className="text-xs text-gray-500 block mb-1">Trẻ em</label>
                       <Select value={children} onValueChange={setChildren}>
                         <SelectTrigger>
                           <SelectValue placeholder="Children" />
@@ -305,31 +287,33 @@ const HotelDetail = () => {
                 
                 <div className="border-t pt-4">
                   <div className="flex justify-between mb-2">
-                    <span>1 night</span>
-                    <span>${hotel.price}</span>
+                    <span>1 đêm</span>
+                    <span>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(hotel.price)}</span>
                   </div>
                   <div className="flex justify-between mb-2 text-sm text-gray-600">
-                    <span>Taxes & fees</span>
-                    <span>${Math.floor(hotel.price * 0.1)}</span>
+                    <span>Thuế & phí</span>
+                    <span>{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(hotel.price * 0.1)}</span>
                   </div>
                   {hotel.discount && (
                     <div className="flex justify-between mb-2 text-green-600 text-sm font-medium">
-                      <span>Discount</span>
-                      <span>-${Math.floor(hotel.price * hotel.discount / 100)}</span>
+                      <span>Giảm giá</span>
+                      <span>-{new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(hotel.price * hotel.discount / 100)}</span>
                     </div>
                   )}
                   <div className="flex justify-between font-bold text-lg mt-2 pt-2 border-t">
-                    <span>Total</span>
+                    <span>Tổng cộng</span>
                     <span>
-                      ${hotel.discount
-                        ? Math.floor(hotel.price * (1 - hotel.discount / 100) + hotel.price * 0.1)
-                        : Math.floor(hotel.price + hotel.price * 0.1)}
+                      {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(
+                        hotel.discount
+                          ? hotel.price * (1 - hotel.discount / 100) + hotel.price * 0.1
+                          : hotel.price + hotel.price * 0.1
+                      )}
                     </span>
                   </div>
                 </div>
                 
-                <Button className="w-full">Reserve Now</Button>
-                <p className="text-xs text-gray-500 text-center">No payment required today</p>
+                <Button className="w-full">Đặt Ngay</Button>
+                <p className="text-xs text-gray-500 text-center">Không cần thanh toán ngay</p>
               </div>
             </div>
           </div>

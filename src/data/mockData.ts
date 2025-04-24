@@ -2,120 +2,120 @@
 export const hotels = [
   {
     id: "1",
-    name: "Grand Hotel Luxury",
-    location: "Paris, France",
-    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    price: 299,
+    name: "Vinpearl Resort & Spa Hạ Long",
+    location: "Hạ Long, Quảng Ninh",
+    image: "https://images.unsplash.com/photo-1571896349842-33c89424de2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80",
+    price: 2990000,
     rating: 4.8,
     featured: true,
-    amenities: ["Free WiFi", "Pool", "Spa", "Restaurant", "Fitness Center"],
-    description: "Experience luxury at its finest in the heart of Paris. Our 5-star hotel offers spectacular views of the Eiffel Tower and exceptional service that will make your stay unforgettable."
+    amenities: ["WiFi Miễn Phí", "Hồ Bơi", "Spa", "Nhà Hàng", "Phòng Gym"],
+    description: "Tận hưởng kỳ nghỉ xa hoa với tầm nhìn tuyệt đẹp ra vịnh Hạ Long. Resort 5 sao của chúng tôi mang đến trải nghiệm đẳng cấp cùng dịch vụ chu đáo."
   },
   {
     id: "2",
-    name: "Seaside Resort & Spa",
-    location: "Bali, Indonesia",
-    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    price: 189,
+    name: "Mường Thanh Luxury Đà Nẵng",
+    location: "Đà Nẵng",
+    image: "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    price: 1890000,
     rating: 4.5,
     discount: 15,
-    amenities: ["Beach Access", "Infinity Pool", "Spa", "Restaurant", "Bar"],
-    description: "Relax in paradise at our beautiful beachfront resort in Bali. Enjoy stunning ocean views, world-class dining, and rejuvenating spa treatments."
+    amenities: ["Bãi Biển Riêng", "Hồ Bơi Vô Cực", "Spa", "Nhà Hàng", "Quầy Bar"],
+    description: "Tọa lạc tại bãi biển Mỹ Khê xinh đẹp, khách sạn mang đến không gian nghỉ dưỡng sang trọng với tầm nhìn ra biển tuyệt đẹp."
   },
   {
     id: "3",
-    name: "City Center Boutique",
-    location: "New York, USA",
-    image: "https://images.unsplash.com/photo-1578683010236-d716f9a3f461?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    price: 249,
+    name: "Rex Hotel Sài Gòn",
+    location: "TP. Hồ Chí Minh",
+    image: "https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    price: 2490000,
     rating: 4.6,
-    amenities: ["Free WiFi", "Bar", "Restaurant", "Concierge", "Business Center"],
-    description: "Stay in the heart of Manhattan in our stylish boutique hotel. Walk to famous attractions, experience the city's vibrant nightlife, and return to your comfortable, modern room."
+    amenities: ["WiFi Miễn Phí", "Quầy Bar", "Nhà Hàng", "Dịch Vụ Phòng", "Trung Tâm Thương Mại"],
+    description: "Khách sạn 5 sao mang tính biểu tượng tại trung tâm Sài Gòn, kết hợp hoàn hảo giữa kiến trúc cổ điển và tiện nghi hiện đại."
   },
   {
     id: "4",
-    name: "Mountain Lodge Retreat",
-    location: "Aspen, Colorado",
+    name: "Hanoi La Siesta",
+    location: "Hà Nội",
     image: "https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    price: 329,
+    price: 1690000,
     rating: 4.7,
     featured: true,
-    amenities: ["Fireplace", "Mountain View", "Ski-in/Ski-out", "Hot Tub", "Restaurant"],
-    description: "Escape to our cozy mountain lodge surrounded by breathtaking alpine scenery. Perfect for ski enthusiasts in winter and hiking lovers in summer."
+    amenities: ["WiFi Miễn Phí", "Spa", "Nhà Hàng", "Quầy Bar", "Xe Đưa Đón"],
+    description: "Khách sạn boutique sang trọng trong khu phố cổ Hà Nội, mang đến không gian yên tĩnh giữa nhịp sống sôi động của thủ đô."
   },
   {
     id: "5",
-    name: "Desert Oasis Resort",
-    location: "Dubai, UAE",
-    image: "https://images.unsplash.com/photo-1589923158684-a21056415766?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    price: 399,
+    name: "Ana Mandara Huế",
+    location: "Huế, Thừa Thiên Huế",
+    image: "https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    price: 2190000,
     rating: 4.9,
     discount: 10,
-    amenities: ["Private Pool", "Desert Views", "Spa", "Multiple Restaurants", "Luxury Transfers"],
-    description: "Indulge in luxury amidst the Arabian desert. Our resort offers private villas with pools, desert adventures, and exceptional Arabian hospitality."
+    amenities: ["Hồ Bơi Riêng", "Spa", "Nhà Hàng", "Bar", "Dịch Vụ Tour"],
+    description: "Resort ven sông Hương thơ mộng, là điểm đến hoàn hảo để khám phá vẻ đẹp cố đô với kiến trúc độc đáo và ẩm thực đặc sắc."
   },
   {
     id: "6",
-    name: "Historic Town Inn",
-    location: "Prague, Czech Republic",
+    name: "Phú Quốc Vinpearl Resort",
+    location: "Phú Quốc, Kiên Giang",
     image: "https://images.unsplash.com/photo-1551632436-cbf8dd35adfa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    price: 159,
-    rating: 4.4,
-    amenities: ["Free WiFi", "Historic Building", "Restaurant", "Bar", "Walking Tours"],
-    description: "Stay in a beautifully restored medieval building in Prague's historic center. Experience the charm of old Europe with modern comforts."
+    price: 3290000,
+    rating: 4.8,
+    amenities: ["Bãi Biển Riêng", "Hồ Bơi", "Spa", "Nhà Hàng", "Casino"],
+    description: "Thiên đường nghỉ dưỡng tại đảo ngọc với bãi biển riêng tuyệt đẹp, dịch vụ đẳng cấp 5 sao và nhiều hoạt động giải trí hấp dẫn."
   }
 ];
 
 export const destinations = [
   {
     id: "1",
-    name: "Paris",
-    image: "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1173&q=80",
-    hotelCount: 245,
+    name: "Hạ Long",
+    image: "https://images.unsplash.com/photo-1528127269322-539801943592?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    hotelCount: 45,
     featured: true
   },
   {
     id: "2",
-    name: "Bali",
-    image: "https://images.unsplash.com/photo-1539367628448-4bc5c9d171c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    hotelCount: 187,
+    name: "Đà Nẵng",
+    image: "https://images.unsplash.com/photo-1558203728-00f45181dd84?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80",
+    hotelCount: 87,
     featured: true
   },
   {
     id: "3",
-    name: "New York",
-    image: "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
-    hotelCount: 320,
+    name: "TP. Hồ Chí Minh",
+    image: "https://images.unsplash.com/photo-1583417319070-4a69db38a482?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80",
+    hotelCount: 120,
     featured: true
   },
   {
     id: "4",
-    name: "Tokyo",
-    image: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1036&q=80",
-    hotelCount: 215
+    name: "Phú Quốc",
+    image: "https://images.unsplash.com/photo-1537956965359-7573183d1f57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1168&q=80",
+    hotelCount: 55
   }
 ];
 
 export const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Nguyễn Thị Mai",
     avatar: "https://i.pravatar.cc/150?img=1",
     rating: 5,
-    comment: "Our stay at Grand Hotel Luxury exceeded all expectations. The staff went above and beyond to ensure our comfort and the views of Paris were breathtaking!",
-    date: "October 12, 2024"
+    comment: "Kỳ nghỉ tuyệt vời tại Vinpearl Hạ Long! Phòng ốc sang trọng, nhân viên phục vụ chu đáo, view vịnh đẹp không thể chê vào đâu được.",
+    date: "24 Tháng 4, 2025"
   },
   {
-    name: "Michael Chen",
+    name: "Trần Văn Nam",
     avatar: "https://i.pravatar.cc/150?img=2",
     rating: 4,
-    comment: "The Seaside Resort in Bali was paradise! Beautiful beaches, amazing food, and such a relaxing atmosphere. Can't wait to return next year!",
-    date: "September 28, 2024"
+    comment: "Mường Thanh Đà Nẵng là một lựa chọn tuyệt vời! Vị trí đẹp, gần biển, nhân viên thân thiện. Chắc chắn sẽ quay lại vào năm sau.",
+    date: "20 Tháng 4, 2025"
   },
   {
-    name: "Emma Williams",
+    name: "Lê Hoàng Anh",
     avatar: "https://i.pravatar.cc/150?img=3",
     rating: 5,
-    comment: "The Mountain Lodge was the perfect winter getaway. Skiing right from our door and warming up by the fireplace in the evening was magical.",
-    date: "October 5, 2024"
+    comment: "Ana Mandara Huế thực sự làm tôi bất ngờ với kiến trúc độc đáo và dịch vụ chuyên nghiệp. Đồ ăn ngon, đặc biệt là các món đặc sản Huế.",
+    date: "15 Tháng 4, 2025"
   }
 ];
