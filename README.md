@@ -9,7 +9,7 @@ Các bước thực hiện:
 git clone https://github.com/nmh2003/sampleFEWebsiteBookingNhom2.git
 
 # B2: Truy cập thư mục frontend
-cd sampleFEWebsiteBookingNhom2 && cd frontend
+cd minhHoaBookingWeb-Nhom2-BTLChuyenDe && cd frontend
 
 # B3: Cài đặt môi trường.
 npm install
