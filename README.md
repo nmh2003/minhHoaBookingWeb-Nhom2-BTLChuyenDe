@@ -6,7 +6,7 @@ Các bước thực hiện:
 
 ```sh
 # B1: Clone repo trên github
-git clone https://github.com/nmh2003/sampleFEWebsiteBookingNhom2.git](https://github.com/nmh2003/minhHoaBookingWeb-Nhom2-BTLChuyenDe.git
+git clone https://github.com/nmh2003/minhHoaBookingWeb-Nhom2-BTLChuyenDe.git
 
 # B2: Truy cập thư mục frontend
 cd minhHoaBookingWeb-Nhom2-BTLChuyenDe && cd frontend
