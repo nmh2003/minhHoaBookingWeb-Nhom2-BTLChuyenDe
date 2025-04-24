@@ -9,6 +9,13 @@ import { Badge } from '@/components/ui/badge';
 import { hotels } from '@/data/mockData';
 import { MapPin, Star, Wifi, Coffee, Utensils, Dumbbell, Check } from 'lucide-react';
 
+const amenityIcons: Record<string, React.ReactNode> = {
+  'WiFi Miễn Phí': <Wifi size={16} className="text-hotel-300" />,
+  'Nhà Hàng': <Utensils size={16} className="text-hotel-300" />,
+  'Phòng Tập Gym': <Dumbbell size={16} className="text-hotel-300" />,
+  'Quán Cà Phê': <Coffee size={16} className="text-hotel-300" />,
+};
+
 const HotelDetail = () => {
   const { id } = useParams<{ id: string }>();
   const [adults, setAdults] = useState('2');
